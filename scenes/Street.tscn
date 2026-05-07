@@ -1,0 +1,674 @@
+[gd_scene format=3 uid="uid://streetscene1"]
+
+[ext_resource type="PackedScene" uid="uid://ba056d6slw4n0" path="res://assets/models/buildings/church/church.glb" id="1_church"]
+[ext_resource type="PackedScene" uid="uid://4i6d62t30jac" path="res://assets/models/buildings/house_squat/house_squat.glb" id="2_squat"]
+[ext_resource type="PackedScene" uid="uid://brkthnpcdhda" path="res://assets/models/buildings/house_commercial/house_commercial.glb" id="3_commercial"]
+[ext_resource type="PackedScene" uid="uid://chc2wu6uqpxbp" path="res://assets/models/buildings/house_narrow/house_narrow.glb" id="4_narrow"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ground"]
+size = Vector3(200, 0.1, 200)
+
+[sub_resource type="StandardMaterial3D" id="Material_ground"]
+albedo_color = Color(0.28, 0.45, 0.18, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_road"]
+size = Vector3(6, 0.1, 140)
+
+[sub_resource type="StandardMaterial3D" id="Material_road"]
+albedo_color = Color(0.25, 0.25, 0.25, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_30ecu"]
+size = Vector3(2.5, 0.12, 140)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u30qc"]
+albedo_color = Color(0.72, 0.7, 0.65, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_od4y3"]
+size = Vector3(2.5, 0.12, 140)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meer4"]
+albedo_color = Color(0.72, 0.7, 0.65, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v3kon"]
+size = Vector3(4, 0.05, 140)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_outro"]
+albedo_color = Color(0.22, 0.52, 0.14, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8kx4l"]
+size = Vector3(4, 0.05, 140)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cjue"]
+albedo_color = Color(0.22, 0.52, 0.14, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ldrwv"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4umer"]
+albedo_color = Color(0.95, 0.9, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c4lcq"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x8075"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qnmh4"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t7d4g"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4hupy"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0e1fw"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_udivi"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_60aqa"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyr0t"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g7i0m"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yh2uy"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kyeqn"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ov6nf"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6v585"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0glxo"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2r5sf"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7kyjq"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kiiti"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e7c4f"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_aetfl"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p071y"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6h38t"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhc8p"]
+albedo_color = Color(0.3, 0.3, 0.32, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kalvw"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4of5"]
+albedo_color = Color(0.15, 0.15, 0.15, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lcjc0"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_pvhq5"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kdo3a"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_0064m"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o3xp3"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_e7v28"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nvgl7"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_lavgp"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_moqbc"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_xkcsh"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6ko5g"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_edrsg"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yjg2f"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_6woxm"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ynevo"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ckrpn"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5biwc"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_jnvvj"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fcymp"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_y77jy"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gn2l7"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 5.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_0865w"]
+size = Vector3(0.5, 0.2, 0.8)
+
+[node name="Street" type="Node3D" unique_id=939448841]
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1822441775]
+transform = Transform3D(0.707, -0.5, 0.5, 0, 0.707, 0.707, -0.707, -0.5, 0.5, 0, 20, 0)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1167844441]
+transform = Transform3D(1, 0, 0, 0, 0.955, -0.296, 0, 0.296, 0.955, 0, 8, 18)
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1237836266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9621258, -0.1, -70.15925)
+mesh = SubResource("BoxMesh_ground")
+surface_material_override/0 = SubResource("Material_ground")
+
+[node name="Road" type="MeshInstance3D" parent="." unique_id=1033665093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -70)
+mesh = SubResource("BoxMesh_road")
+surface_material_override/0 = SubResource("Material_road")
+
+[node name="Church" parent="." unique_id=957398041 instance=ExtResource("1_church")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -135)
+
+[node name="HousesLeft" type="Node3D" parent="." unique_id=1989474362]
+
+[node name="House_L1" parent="HousesLeft" unique_id=2080501559 instance=ExtResource("2_squat")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -13.961489, 0, -5)
+
+[node name="House_L2" parent="HousesLeft" unique_id=1584094444 instance=ExtResource("3_commercial")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -15)
+
+[node name="House_L3" parent="HousesLeft" unique_id=112538404 instance=ExtResource("4_narrow")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -25)
+
+[node name="House_L4" parent="HousesLeft" unique_id=1799768618 instance=ExtResource("2_squat")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -14.291208, 0, -35)
+
+[node name="House_L5" parent="HousesLeft" unique_id=1046120513 instance=ExtResource("3_commercial")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -45)
+
+[node name="House_L6" parent="HousesLeft" unique_id=704934299 instance=ExtResource("4_narrow")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -55)
+
+[node name="House_L7" parent="HousesLeft" unique_id=1870224932 instance=ExtResource("2_squat")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -65)
+
+[node name="House_L8" parent="HousesLeft" unique_id=1939774215 instance=ExtResource("3_commercial")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -75)
+
+[node name="House_L9" parent="HousesLeft" unique_id=1073109802 instance=ExtResource("4_narrow")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -85)
+
+[node name="House_L10" parent="HousesLeft" unique_id=2145229033 instance=ExtResource("2_squat")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -14.136034, 0, -95)
+
+[node name="House_L11" parent="HousesLeft" unique_id=1753682401 instance=ExtResource("3_commercial")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -105)
+
+[node name="House_L12" parent="HousesLeft" unique_id=1607165293 instance=ExtResource("4_narrow")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -9, 0, -115)
+
+[node name="HousesRight" type="Node3D" parent="." unique_id=1615014324]
+
+[node name="House_R1" parent="HousesRight" unique_id=1138922857 instance=ExtResource("3_commercial")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -5)
+
+[node name="House_R2" parent="HousesRight" unique_id=1834284802 instance=ExtResource("4_narrow")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -15)
+
+[node name="House_R3" parent="HousesRight" unique_id=1092654013 instance=ExtResource("2_squat")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 14.082008, 0, -25)
+
+[node name="House_R4" parent="HousesRight" unique_id=1795860243 instance=ExtResource("3_commercial")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -35)
+
+[node name="House_R5" parent="HousesRight" unique_id=44554874 instance=ExtResource("4_narrow")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -45)
+
+[node name="House_R6" parent="HousesRight" unique_id=580636503 instance=ExtResource("2_squat")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -55)
+
+[node name="House_R7" parent="HousesRight" unique_id=1580162970 instance=ExtResource("3_commercial")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -65)
+
+[node name="House_R8" parent="HousesRight" unique_id=288984320 instance=ExtResource("4_narrow")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -75)
+
+[node name="House_R9" parent="HousesRight" unique_id=931656152 instance=ExtResource("2_squat")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 14.03957, 0, -85)
+
+[node name="House_R10" parent="HousesRight" unique_id=495084717 instance=ExtResource("3_commercial")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -95)
+
+[node name="House_R11" parent="HousesRight" unique_id=1175277259 instance=ExtResource("4_narrow")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -105)
+
+[node name="House_R12" parent="HousesRight" unique_id=716860757 instance=ExtResource("2_squat")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 9, 0, -115)
+
+[node name="SidewalkLeft" type="MeshInstance3D" parent="." unique_id=21690688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25, 0.01, -70)
+mesh = SubResource("BoxMesh_30ecu")
+surface_material_override/0 = SubResource("StandardMaterial3D_u30qc")
+
+[node name="SidewalkRight" type="MeshInstance3D" parent="." unique_id=2093387698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 0.01, -70)
+mesh = SubResource("BoxMesh_od4y3")
+surface_material_override/0 = SubResource("StandardMaterial3D_meer4")
+
+[node name="GrassLeft" type="MeshInstance3D" parent="." unique_id=527105456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -70)
+mesh = SubResource("BoxMesh_v3kon")
+surface_material_override/0 = SubResource("StandardMaterial3D_outro")
+
+[node name="GrassRight" type="MeshInstance3D" parent="." unique_id=588094290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -70)
+mesh = SubResource("BoxMesh_8kx4l")
+surface_material_override/0 = SubResource("StandardMaterial3D_3cjue")
+
+[node name="RoadMarkings" type="Node3D" parent="." unique_id=1272823279]
+
+[node name="Dash" type="MeshInstance3D" parent="RoadMarkings" unique_id=467769409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -6)
+mesh = SubResource("BoxMesh_ldrwv")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47252" type="MeshInstance3D" parent="RoadMarkings" unique_id=1208091872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -12)
+mesh = SubResource("BoxMesh_c4lcq")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47253" type="MeshInstance3D" parent="RoadMarkings" unique_id=1059873155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -18)
+mesh = SubResource("BoxMesh_x8075")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47254" type="MeshInstance3D" parent="RoadMarkings" unique_id=1186901348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -24)
+mesh = SubResource("BoxMesh_qnmh4")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47255" type="MeshInstance3D" parent="RoadMarkings" unique_id=1091998163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -30)
+mesh = SubResource("BoxMesh_t7d4g")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47256" type="MeshInstance3D" parent="RoadMarkings" unique_id=1174988835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -36)
+mesh = SubResource("BoxMesh_4hupy")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47257" type="MeshInstance3D" parent="RoadMarkings" unique_id=532502851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -42)
+mesh = SubResource("BoxMesh_0e1fw")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47258" type="MeshInstance3D" parent="RoadMarkings" unique_id=567906313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -48)
+mesh = SubResource("BoxMesh_udivi")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47259" type="MeshInstance3D" parent="RoadMarkings" unique_id=2072032850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -54)
+mesh = SubResource("BoxMesh_60aqa")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47260" type="MeshInstance3D" parent="RoadMarkings" unique_id=164662476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -60)
+mesh = SubResource("BoxMesh_qyr0t")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47261" type="MeshInstance3D" parent="RoadMarkings" unique_id=1266477671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -66)
+mesh = SubResource("BoxMesh_g7i0m")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47262" type="MeshInstance3D" parent="RoadMarkings" unique_id=182067019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -72)
+mesh = SubResource("BoxMesh_yh2uy")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47263" type="MeshInstance3D" parent="RoadMarkings" unique_id=414125201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -78)
+mesh = SubResource("BoxMesh_kyeqn")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47264" type="MeshInstance3D" parent="RoadMarkings" unique_id=1750854784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -84)
+mesh = SubResource("BoxMesh_ov6nf")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47265" type="MeshInstance3D" parent="RoadMarkings" unique_id=1532945552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -90)
+mesh = SubResource("BoxMesh_6v585")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47266" type="MeshInstance3D" parent="RoadMarkings" unique_id=1976483898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -96)
+mesh = SubResource("BoxMesh_0glxo")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47267" type="MeshInstance3D" parent="RoadMarkings" unique_id=1632918829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -102)
+mesh = SubResource("BoxMesh_2r5sf")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47268" type="MeshInstance3D" parent="RoadMarkings" unique_id=2068605477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -108)
+mesh = SubResource("BoxMesh_7kyjq")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47269" type="MeshInstance3D" parent="RoadMarkings" unique_id=1303342879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -114)
+mesh = SubResource("BoxMesh_kiiti")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47270" type="MeshInstance3D" parent="RoadMarkings" unique_id=40145302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -120)
+mesh = SubResource("BoxMesh_e7c4f")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47271" type="MeshInstance3D" parent="RoadMarkings" unique_id=1212763652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -126)
+mesh = SubResource("BoxMesh_aetfl")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="@MeshInstance3D@47272" type="MeshInstance3D" parent="RoadMarkings" unique_id=334172926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -132)
+mesh = SubResource("BoxMesh_p071y")
+surface_material_override/0 = SubResource("StandardMaterial3D_4umer")
+
+[node name="StreetLamps" type="Node3D" parent="." unique_id=891702148]
+
+[node name="Lamp_0" type="Node3D" parent="StreetLamps" unique_id=1951149140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -10)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_0" unique_id=619431530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_6h38t")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_0" unique_id=1857928567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_kalvw")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_0" unique_id=370289812]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_1" type="Node3D" parent="StreetLamps" unique_id=1950326377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -10)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_1" unique_id=1322022576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_lcjc0")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_1" unique_id=1636956640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_pvhq5")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_1" unique_id=915940219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_2" type="Node3D" parent="StreetLamps" unique_id=1135189146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -30)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_2" unique_id=2022643759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_kdo3a")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_2" unique_id=425031837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_0064m")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_2" unique_id=1156234931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_3" type="Node3D" parent="StreetLamps" unique_id=698788638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -30)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_3" unique_id=1999044858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_o3xp3")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_3" unique_id=851337178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_e7v28")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_3" unique_id=309353763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_4" type="Node3D" parent="StreetLamps" unique_id=1678234321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -50)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_4" unique_id=1449623025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_nvgl7")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_4" unique_id=271073723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_lavgp")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_4" unique_id=937466607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_5" type="Node3D" parent="StreetLamps" unique_id=261600424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -50)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_5" unique_id=1915204636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_moqbc")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_5" unique_id=692632378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_xkcsh")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_5" unique_id=1626832572]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_6" type="Node3D" parent="StreetLamps" unique_id=1274884889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -70)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_6" unique_id=561605566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_6ko5g")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_6" unique_id=1405229549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_edrsg")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_6" unique_id=161788296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_7" type="Node3D" parent="StreetLamps" unique_id=321996704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -70)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_7" unique_id=745613539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_yjg2f")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_7" unique_id=899477845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_6woxm")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_7" unique_id=291088539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_8" type="Node3D" parent="StreetLamps" unique_id=795006115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -90)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_8" unique_id=633366818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_ynevo")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_8" unique_id=1951911356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_ckrpn")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_8" unique_id=206945324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_9" type="Node3D" parent="StreetLamps" unique_id=1654810918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -90)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_9" unique_id=301503841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_5biwc")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_9" unique_id=1187765506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_jnvvj")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_9" unique_id=1453254664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_10" type="Node3D" parent="StreetLamps" unique_id=335294498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -110)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_10" unique_id=810786061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_fcymp")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_10" unique_id=157561983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_y77jy")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_10" unique_id=1914273130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0
+
+[node name="Lamp_11" type="Node3D" parent="StreetLamps" unique_id=1384078263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -110)
+
+[node name="Pole" type="MeshInstance3D" parent="StreetLamps/Lamp_11" unique_id=1415588135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+mesh = SubResource("CylinderMesh_gn2l7")
+surface_material_override/0 = SubResource("StandardMaterial3D_dhc8p")
+
+[node name="Head" type="MeshInstance3D" parent="StreetLamps/Lamp_11" unique_id=2109944708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+mesh = SubResource("BoxMesh_0865w")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4of5")
+
+[node name="Light" type="OmniLight3D" parent="StreetLamps/Lamp_11" unique_id=2568391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0)
+light_color = Color(1, 0.92, 0.7, 1)
+light_energy = 1.5
+omni_range = 12.0

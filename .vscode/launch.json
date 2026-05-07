@@ -1,0 +1,29 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Godot: Launch Main Scene",
+			"type": "godot",
+			"request": "launch",
+			"project": "${workspaceFolder}",
+			"editor_path": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"scene": "main",
+			"debug_collisions": false,
+			"debug_paths": false,
+			"debug_navigation": false,
+			"additional_options": ""
+		},
+		{
+			"name": "Godot: Launch Current Scene",
+			"type": "godot",
+			"request": "launch",
+			"project": "${workspaceFolder}",
+			"editor_path": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"scene": "current",
+			"debug_collisions": false,
+			"debug_paths": false,
+			"debug_navigation": false,
+			"additional_options": ""
+		}
+	]
+}

@@ -1,3 +1,33 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Local editor/runtime state
+.DS_Store
+.venv/
+.playwright-cli/
+goblend.log
+*.log
+Thumbs.db
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Blender local backup files
+*.blend1
+*.blend2
+
+# Godot Blender bridge output
+goblend/
+
+# Local build/export output
+builds/
+exports/
+
+# Local third-party tool checkouts and generated dependencies
+external/mesh2motion-app/
+external/mesh2motion-assets/
+external/**/node_modules/
+external/*.log
+external/*.pid

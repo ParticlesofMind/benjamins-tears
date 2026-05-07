@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://fcglub3xowwl"]
+
+[ext_resource type="PackedScene" uid="uid://k5es7vxvaej2" path="res://scenes/composites/Town.tscn" id="1_town"]
+[ext_resource type="PackedScene" uid="uid://b540c3pyuurtj" path="res://scenes/JournalMap.tscn" id="2_jmap"]
+[ext_resource type="PackedScene" uid="uid://4l3gphtw1t66" path="res://scenes/PauseMenu.tscn" id="3_pmenu"]
+[ext_resource type="Script" uid="uid://rc1xvlnjd6a0" path="res://scripts/world/world_loop.gd" id="4_loop"]
+[ext_resource type="Script" uid="uid://ddxl1c8140jvh" path="res://scripts/world/safe_area.gd" id="5_safe"]
+[ext_resource type="Script" uid="uid://conf67irsgyxb" path="res://scripts/world/prototype_terrain.gd" id="6_terrain"]
+[ext_resource type="PackedScene" path="res://scenes/atoms/characters/Yumaya.tscn" id="7_yumaya"]
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
+sky_top_color = Color(0.38, 0.6, 0.85, 1)
+sky_horizon_color = Color(0.78, 0.86, 0.94, 1)
+ground_bottom_color = Color(0.35, 0.32, 0.28, 1)
+ground_horizon_color = Color(0.56, 0.5, 0.42, 1)
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("SkyMat")
+
+[sub_resource type="Environment" id="Env"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 3
+ambient_light_energy = 0.5
+
+[sub_resource type="CylinderMesh" id="CraterMesh"]
+top_radius = 7.0
+bottom_radius = 10.0
+height = 0.35
+
+[sub_resource type="StandardMaterial3D" id="CraterMat"]
+albedo_color = Color(0.08, 0.075, 0.07, 1)
+
+[sub_resource type="BoxShape3D" id="HouseShelterShape"]
+size = Vector3(6, 3, 7)
+
+[sub_resource type="BoxMesh" id="ShelterMarkerMesh"]
+size = Vector3(4.5, 0.08, 2.8)
+
+[sub_resource type="StandardMaterial3D" id="ShelterMarkerMat"]
+transparency = 1
+albedo_color = Color(0.15, 0.55, 0.42, 0.55)
+emission_enabled = true
+emission = Color(0.04, 0.32, 0.2, 1)
+emission_energy_multiplier = 0.45
+
+[sub_resource type="BoxShape3D" id="ChurchShelterShape"]
+size = Vector3(13, 4, 16)
+
+[node name="World" type="Node3D" unique_id=1889254475]
+script = ExtResource("4_loop")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=921606087]
+environment = SubResource("Env")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=612278323]
+transform = Transform3D(1, 0, 0, 0, 0.707, 0.707, 0, -0.707, 0.707, 0, 30, 0)
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 1.8
+shadow_enabled = true
+
+[node name="PrototypeTerrain" type="StaticBody3D" parent="." unique_id=1386669713]
+script = ExtResource("6_terrain")
+
+[node name="Crater" type="MeshInstance3D" parent="." unique_id=1382615088]
+transform = Transform3D(1, 0, 0, 0, 0.18, 0, 0, 0, 1, 0, 0.02, 61)
+mesh = SubResource("CraterMesh")
+surface_material_override/0 = SubResource("CraterMat")
+
+[node name="Town" parent="." unique_id=1595167947 instance=ExtResource("1_town")]
+
+[node name="Yumaya" parent="." instance=ExtResource("7_yumaya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, -124)
+
+[node name="HouseShelter" type="Area3D" parent="." unique_id=1119464716 groups=["safe_area"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.6, 1.2, -17)
+script = ExtResource("5_safe")
+area_name = "house doorway"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HouseShelter" unique_id=669973251]
+shape = SubResource("HouseShelterShape")
+
+[node name="Marker" type="MeshInstance3D" parent="HouseShelter" unique_id=35576768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.15, 0)
+mesh = SubResource("ShelterMarkerMesh")
+surface_material_override/0 = SubResource("ShelterMarkerMat")
+
+[node name="ChurchShelter" type="Area3D" parent="." unique_id=92814997 groups=["safe_area"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -133)
+script = ExtResource("5_safe")
+area_name = "church threshold"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChurchShelter" unique_id=440277823]
+shape = SubResource("ChurchShelterShape")
+
+[node name="Marker" type="MeshInstance3D" parent="ChurchShelter" unique_id=934844537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.45, 5.5)
+mesh = SubResource("ShelterMarkerMesh")
+surface_material_override/0 = SubResource("ShelterMarkerMat")
+
+[node name="JournalMap" parent="." unique_id=306129588 instance=ExtResource("2_jmap")]
+
+[node name="PauseMenu" parent="." unique_id=16866816 instance=ExtResource("3_pmenu")]
+
+[node name="LoopHUD" type="CanvasLayer" parent="." unique_id=970087600]
+
+[node name="DangerTint" type="ColorRect" parent="LoopHUD" unique_id=52758201]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Panel" type="PanelContainer" parent="LoopHUD" unique_id=1070893325]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 590.0
+offset_bottom = 150.0
+
+[node name="Margin" type="MarginContainer" parent="LoopHUD/Panel" unique_id=1768611700]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="Stack" type="VBoxContainer" parent="LoopHUD/Panel/Margin" unique_id=1709970803]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="LoopHUD/Panel/Margin/Stack" unique_id=146676093]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Crater"
+
+[node name="Detail" type="Label" parent="LoopHUD/Panel/Margin/Stack" unique_id=1936227461]
+layout_mode = 2
+text = "Reach the village."
+autowrap_mode = 3
+
+[node name="Timer" type="Label" parent="LoopHUD/Panel/Margin/Stack" unique_id=1685540826]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.74, 0.66, 1)
+text = "First Überfall in 00:00"

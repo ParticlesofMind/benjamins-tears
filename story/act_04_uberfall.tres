@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="StoryAct" format=3 uid="uid://ctt6yk7glexit"]
+
+[ext_resource type="Script" uid="uid://3humhmorcc7" path="res://story/story_act.gd" id="1_act"]
+[ext_resource type="Script" uid="uid://cv5jliu5vfrav" path="res://story/story_beat.gd" id="2_beat"]
+
+[sub_resource type="Resource" id="beat_gates"]
+script = ExtResource("2_beat")
+id = &"uberfall_at_gates"
+title = "At the Gates"
+zone = "Town"
+description = "The monsters approach. Shops shuttered. Benjamin rushes inside."
+
+[sub_resource type="Resource" id="beat_inside"]
+script = ExtResource("2_beat")
+id = &"uberfall_indoors"
+title = "Inside"
+zone = "Town"
+description = "Benjamin tends his stringboard. Characters, places, creatures. The world resists understanding."
+
+[resource]
+script = ExtResource("1_act")
+title = "IV — Überfall"
+beats = Array[ExtResource("2_beat")]([SubResource("beat_gates"), SubResource("beat_inside")])

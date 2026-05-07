@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dvt4s8ca6d5i2"]
+
+[ext_resource type="PackedScene" uid="uid://4i6d62t30jac" path="res://assets/models/buildings/house_squat/house_squat.glb" id="1_ieg2f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ieg2f"]
+size = Vector3(8, 15, 8)
+
+[node name="House_Squat" type="StaticBody3D" unique_id=158163394]
+
+[node name="Mesh" type="Node3D" parent="." unique_id=1417780907 instance=ExtResource("1_ieg2f")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1978864684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
+shape = SubResource("BoxShape3D_ieg2f")

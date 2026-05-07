@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://brq8hynsjgfj2"]
+
+[ext_resource type="PackedScene" uid="uid://brkthnpcdhda" path="res://assets/models/buildings/house_commercial/house_commercial.glb" id="1_c2n11"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c2n11"]
+size = Vector3(8, 15, 8)
+
+[node name="House_Commercial" type="StaticBody3D" unique_id=726009085]
+
+[node name="Mesh" type="Node3D" parent="." unique_id=1771849999 instance=ExtResource("1_c2n11")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1494654788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
+shape = SubResource("BoxShape3D_c2n11")

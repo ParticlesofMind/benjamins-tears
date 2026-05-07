@@ -1,0 +1,98 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Godot: Run Main Scene",
+			"type": "shell",
+			"command": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"args": [
+				"--path",
+				"${workspaceFolder}"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Godot: Run Current Scene",
+			"type": "shell",
+			"command": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"args": [
+				"--path",
+				"${workspaceFolder}",
+				"--scene",
+				"${file}"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Godot: Import Assets",
+			"type": "shell",
+			"command": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"args": [
+				"--headless",
+				"--path",
+				"${workspaceFolder}",
+				"--import"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Godot: Smoke Test Main Scene",
+			"type": "shell",
+			"command": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"args": [
+				"--headless",
+				"--path",
+				"${workspaceFolder}",
+				"--quit-after",
+				"5"
+			],
+			"dependsOn": "Godot: Import Assets",
+			"dependsOrder": "sequence",
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
+			"label": "GDScript: Lint",
+			"type": "shell",
+			"command": "${workspaceFolder}/.venv/bin/gdlint",
+			"args": [
+				"scripts",
+				"story",
+				"tests"
+			],
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
+			"label": "GDScript: Format Check",
+			"type": "shell",
+			"command": "${workspaceFolder}/.venv/bin/gdformat",
+			"args": [
+				"--check",
+				"scripts",
+				"story",
+				"tests"
+			],
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
+			"label": "GUT: Run Tests",
+			"type": "shell",
+			"command": "/Applications/Godot.app/Contents/MacOS/Godot",
+			"args": [
+				"--headless",
+				"--path",
+				"${workspaceFolder}",
+				"-s",
+				"res://addons/gut/gut_cmdln.gd",
+				"-gexit",
+				"-gdisable_colors"
+			],
+			"dependsOn": "Godot: Import Assets",
+			"dependsOrder": "sequence",
+			"group": "test",
+			"problemMatcher": []
+		}
+	]
+}

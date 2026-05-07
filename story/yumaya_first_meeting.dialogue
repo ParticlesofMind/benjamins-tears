@@ -1,0 +1,10 @@
+using StoryManager
+
+~ start
+Yumaya: You fell loudly.
+Benjamin: I was trying to be discreet.
+Yumaya: The church heard you. The town did too.
+do StoryManager.complete_beat(&"spot_yumaya")
+Yumaya: When the air changes, stand under a roof that still believes in being a roof.
+do request_uberfall_warning()
+=> END

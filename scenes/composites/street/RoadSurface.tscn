@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://d0vdg7tyh4h0s"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0af38"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_82t42"]
+albedo_color = Color(0.95, 0.9, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bmgr0"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r6bod"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_evttn"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kgxm7"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hdhat"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0nkst"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ncb4h"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ntau"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_spx6o"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_shfnl"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o32lo"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0hscl"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mr4kr"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p0exk"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_olhsi"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ge0ij"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r8snm"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bcmjy"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_swbri"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3ogv3"]
+size = Vector3(0.18, 0.06, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lhvtk"]
+size = Vector3(0.18, 0.06, 4)
+
+[node name="RoadSurface" type="Node3D" unique_id=1322100018]
+
+[node name="Road" type="StaticBody3D" parent="." unique_id=369096347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -70)
+
+[node name="SidewalkLeft" type="StaticBody3D" parent="." unique_id=51278302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25, 0.01, -70)
+
+[node name="SidewalkRight" type="StaticBody3D" parent="." unique_id=729131097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 0.01, -70)
+
+[node name="GrassLeft" type="StaticBody3D" parent="." unique_id=550284948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -70)
+
+[node name="GrassRight" type="StaticBody3D" parent="." unique_id=1891639762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -70)
+
+[node name="RoadMarkings" type="Node3D" parent="." unique_id=606119165]
+
+[node name="Dash_0" type="MeshInstance3D" parent="RoadMarkings" unique_id=1419305274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -6)
+mesh = SubResource("BoxMesh_0af38")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_1" type="MeshInstance3D" parent="RoadMarkings" unique_id=403073101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -12)
+mesh = SubResource("BoxMesh_bmgr0")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_2" type="MeshInstance3D" parent="RoadMarkings" unique_id=54875891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -18)
+mesh = SubResource("BoxMesh_r6bod")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_3" type="MeshInstance3D" parent="RoadMarkings" unique_id=2137811502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -24)
+mesh = SubResource("BoxMesh_evttn")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_4" type="MeshInstance3D" parent="RoadMarkings" unique_id=1485235168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -30)
+mesh = SubResource("BoxMesh_kgxm7")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_5" type="MeshInstance3D" parent="RoadMarkings" unique_id=267891320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -36)
+mesh = SubResource("BoxMesh_hdhat")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_6" type="MeshInstance3D" parent="RoadMarkings" unique_id=972740118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -42)
+mesh = SubResource("BoxMesh_0nkst")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_7" type="MeshInstance3D" parent="RoadMarkings" unique_id=1817794449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -48)
+mesh = SubResource("BoxMesh_ncb4h")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_8" type="MeshInstance3D" parent="RoadMarkings" unique_id=1166439245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -54)
+mesh = SubResource("BoxMesh_6ntau")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_9" type="MeshInstance3D" parent="RoadMarkings" unique_id=1182014850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -60)
+mesh = SubResource("BoxMesh_spx6o")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_10" type="MeshInstance3D" parent="RoadMarkings" unique_id=2012166263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -66)
+mesh = SubResource("BoxMesh_shfnl")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_11" type="MeshInstance3D" parent="RoadMarkings" unique_id=1282666650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -72)
+mesh = SubResource("BoxMesh_o32lo")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_12" type="MeshInstance3D" parent="RoadMarkings" unique_id=1749447130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -78)
+mesh = SubResource("BoxMesh_0hscl")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_13" type="MeshInstance3D" parent="RoadMarkings" unique_id=2110195889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -84)
+mesh = SubResource("BoxMesh_mr4kr")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_14" type="MeshInstance3D" parent="RoadMarkings" unique_id=721402707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -90)
+mesh = SubResource("BoxMesh_p0exk")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_15" type="MeshInstance3D" parent="RoadMarkings" unique_id=67786195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -96)
+mesh = SubResource("BoxMesh_olhsi")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_16" type="MeshInstance3D" parent="RoadMarkings" unique_id=1018516038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -102)
+mesh = SubResource("BoxMesh_ge0ij")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_17" type="MeshInstance3D" parent="RoadMarkings" unique_id=1544559315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -108)
+mesh = SubResource("BoxMesh_r8snm")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_18" type="MeshInstance3D" parent="RoadMarkings" unique_id=688708611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -114)
+mesh = SubResource("BoxMesh_bcmjy")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_19" type="MeshInstance3D" parent="RoadMarkings" unique_id=459043664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -120)
+mesh = SubResource("BoxMesh_swbri")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_20" type="MeshInstance3D" parent="RoadMarkings" unique_id=1684437541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -126)
+mesh = SubResource("BoxMesh_3ogv3")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")
+
+[node name="Dash_21" type="MeshInstance3D" parent="RoadMarkings" unique_id=744645651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -132)
+mesh = SubResource("BoxMesh_lhvtk")
+surface_material_override/0 = SubResource("StandardMaterial3D_82t42")

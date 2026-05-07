@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StoryAct" format=3]
+
+[ext_resource type="Script" path="res://story/story_act.gd" id="1_act"]
+[ext_resource type="Script" path="res://story/story_beat.gd" id="2_beat"]
+
+[sub_resource type="Resource" id="beat_spot_yumaya"]
+script = ExtResource("2_beat")
+id = &"spot_yumaya"
+title = "A Figure at the Church"
+zone = "Church"
+description = "A young redhead skips around the abandoned church. Long, poorly adjusted scarf. She catches Benjamin's eye."
+completed = false
+
+[resource]
+script = ExtResource("1_act")
+title = "V — A Boy Meets Girl"
+beats = [SubResource("beat_spot_yumaya")]

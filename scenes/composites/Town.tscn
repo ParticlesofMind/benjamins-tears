@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://k5es7vxvaej2"]
+
+[ext_resource type="PackedScene" uid="uid://cemb2vhc75u6j" path="res://scenes/composites/street/StreetBlock.tscn" id="1_eimtf"]
+[ext_resource type="PackedScene" uid="uid://cnvxyqg65mujd" path="res://scenes/atoms/characters/Player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://dx2gxj63vge3n" path="res://scenes/atoms/characters/NPC.tscn" id="3_npc"]
+
+[sub_resource type="BoxShape3D" id="GroundShape"]
+size = Vector3(30, 0.2, 140)
+
+[sub_resource type="PlaneMesh" id="GroundMesh"]
+size = Vector2(30, 140)
+subdivide_width = 0
+subdivide_depth = 0
+
+[sub_resource type="StandardMaterial3D" id="GroundMat"]
+albedo_color = Color(0.22, 0.35, 0.12, 1)
+
+[node name="Town" type="Node3D" unique_id=1595167947]
+
+[node name="TownGround" type="StaticBody3D" parent="." unique_id=1428731063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -65)
+
+[node name="GroundCollision" type="CollisionShape3D" parent="TownGround" unique_id=1111111111]
+shape = SubResource("GroundShape")
+
+[node name="GroundMesh" type="MeshInstance3D" parent="TownGround" unique_id=1428731064]
+mesh = SubResource("GroundMesh")
+surface_material_override/0 = SubResource("GroundMat")
+
+[node name="MainStreet" type="Node3D" parent="." unique_id=1837026963 instance=ExtResource("1_eimtf")]
+
+[node name="Player" parent="." unique_id=2222222222 instance=ExtResource("2_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10)
+
+[node name="NPC_1" parent="." unique_id=3000000001 instance=ExtResource("3_npc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25, 0, -20)
+
+[node name="NPC_2" parent="." unique_id=3000000002 instance=ExtResource("3_npc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 0, -40)
+
+[node name="NPC_3" parent="." unique_id=3000000003 instance=ExtResource("3_npc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25, 0, -60)
+
+[node name="NPC_4" parent="." unique_id=3000000004 instance=ExtResource("3_npc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 0, -80)
+
+[node name="NPC_5" parent="." unique_id=3000000005 instance=ExtResource("3_npc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25, 0, -100)

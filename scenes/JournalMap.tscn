@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj2e5h7k9l1m4p8"]
+
+[ext_resource type="Script" path="res://scripts/ui/journal_map.gd" id="1_jmap"]
+
+[node name="JournalMap" type="CanvasLayer"]
+script = ExtResource("1_jmap")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.04, 0.03, 0.03, 0.92)
+mouse_filter = 0
+
+[node name="MapPanel" type="Control" parent="Background"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+
+[node name="Lines" type="Node2D" parent="Background/MapPanel"]
+position = Vector2(120, 90)
+
+[node name="MapArea" type="Control" parent="Background/MapPanel"]
+layout_mode = 0
+position = Vector2(120, 90)
+size = Vector2(1680, 560)
+
+[node name="TitleLabel" type="Label" parent="Background"]
+layout_mode = 0
+position = Vector2(40, 18)
+text = "Benjamin's Map"
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.75, 0.65, 0.45, 0.9)
+
+[node name="HintLabel" type="Label" parent="Background"]
+layout_mode = 0
+position = Vector2(40, 680)
+text = "M  ·  close"
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.45, 0.4, 0.35, 0.6)
+
+[node name="BorderTop" type="ColorRect" parent="Background"]
+layout_mode = 0
+position = Vector2(120, 88)
+size = Vector2(1680, 1)
+color = Color(0.55, 0.45, 0.3, 0.3)
+
+[node name="BorderBottom" type="ColorRect" parent="Background"]
+layout_mode = 0
+position = Vector2(120, 651)
+size = Vector2(1680, 1)
+color = Color(0.55, 0.45, 0.3, 0.3)

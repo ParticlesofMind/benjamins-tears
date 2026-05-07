@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c32om1xpvw8r4"]
+
+[ext_resource type="Script" path="res://scripts/interaction/dialogue_actor.gd" id="1_actor"]
+[ext_resource type="Resource" path="res://story/yumaya_first_meeting.dialogue" id="2_dialogue"]
+[ext_resource type="PackedScene" uid="uid://bw4qeyuptn6c3" path="res://assets/models/characters/npc/runtime/npc_character_animated.glb" id="3_mesh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_talk"]
+radius = 2.5
+
+[node name="Yumaya" type="Area3D"]
+script = ExtResource("1_actor")
+dialogue_resource = ExtResource("2_dialogue")
+prompt_text = "E Talk"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0, 0)
+shape = SubResource("SphereShape3D_talk")
+
+[node name="Mesh" parent="." instance=ExtResource("3_mesh")]
+
+[node name="Prompt" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35, 0)
+billboard = 1
+text = "E Talk"
+outline_size = 8
+visible = false

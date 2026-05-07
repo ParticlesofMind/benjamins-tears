@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="StoryAct" format=3 uid="uid://dibbdycve5knh"]
+
+[ext_resource type="Script" uid="uid://3humhmorcc7" path="res://story/story_act.gd" id="1_act"]
+[ext_resource type="Script" uid="uid://cv5jliu5vfrav" path="res://story/story_beat.gd" id="2_beat"]
+
+[resource]
+script = ExtResource("1_act")
+title = "I — The Fall"

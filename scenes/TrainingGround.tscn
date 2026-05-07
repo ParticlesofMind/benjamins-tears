@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://dnggswxwi2x4s"]
+
+[ext_resource type="Script" path="res://scripts/world/training_ground.gd" id="1_trainer"]
+[ext_resource type="PackedScene" path="res://scenes/atoms/characters/Player.tscn" id="2_player"]
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
+sky_top_color = Color(0.34, 0.56, 0.78, 1)
+sky_horizon_color = Color(0.78, 0.84, 0.88, 1)
+ground_bottom_color = Color(0.26, 0.28, 0.24, 1)
+ground_horizon_color = Color(0.48, 0.5, 0.44, 1)
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("SkyMat")
+
+[sub_resource type="Environment" id="Env"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 3
+ambient_light_energy = 0.65
+
+[sub_resource type="BoxShape3D" id="GroundShape"]
+size = Vector3(34, 0.2, 42)
+
+[sub_resource type="BoxMesh" id="GroundMesh"]
+size = Vector3(34, 0.2, 42)
+
+[sub_resource type="StandardMaterial3D" id="GroundMat"]
+albedo_color = Color(0.21, 0.28, 0.24, 1)
+roughness = 0.82
+
+[sub_resource type="CylinderMesh" id="MarkerMesh"]
+top_radius = 1.15
+bottom_radius = 1.15
+height = 0.08
+
+[sub_resource type="StandardMaterial3D" id="WalkMat"]
+albedo_color = Color(0.12, 0.45, 0.9, 1)
+emission_enabled = true
+emission = Color(0.08, 0.25, 0.65, 1)
+emission_energy_multiplier = 0.35
+
+[sub_resource type="StandardMaterial3D" id="RunMat"]
+albedo_color = Color(0.96, 0.64, 0.16, 1)
+emission_enabled = true
+emission = Color(0.85, 0.35, 0.04, 1)
+emission_energy_multiplier = 0.3
+
+[sub_resource type="StandardMaterial3D" id="JumpMat"]
+albedo_color = Color(0.18, 0.75, 0.34, 1)
+emission_enabled = true
+emission = Color(0.05, 0.5, 0.18, 1)
+emission_energy_multiplier = 0.35
+
+[sub_resource type="BoxMesh" id="RailMesh"]
+size = Vector3(5.0, 0.22, 0.22)
+
+[sub_resource type="BoxShape3D" id="RailShape"]
+size = Vector3(5.0, 0.22, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="RailMat"]
+albedo_color = Color(0.74, 0.12, 0.08, 1)
+roughness = 0.55
+
+[sub_resource type="BoxMesh" id="BeamMesh"]
+size = Vector3(0.2, 1.0, 0.2)
+
+[sub_resource type="BoxMesh" id="BoundaryMesh"]
+size = Vector3(34, 0.08, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="BoundaryMat"]
+albedo_color = Color(0.62, 0.6, 0.5, 1)
+
+[node name="TrainingGround" type="Node3D"]
+script = ExtResource("1_trainer")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 0, 18, 0)
+light_color = Color(1, 0.94, 0.84, 1)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("GroundShape")
+
+[node name="GroundMesh" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("GroundMesh")
+surface_material_override/0 = SubResource("GroundMat")
+
+[node name="BoundaryFront" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 12.8)
+mesh = SubResource("BoundaryMesh")
+surface_material_override/0 = SubResource("BoundaryMat")
+
+[node name="BoundaryBack" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, -28.8)
+mesh = SubResource("BoundaryMesh")
+surface_material_override/0 = SubResource("BoundaryMat")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8)
+
+[node name="Markers" type="Node3D" parent="."]
+
+[node name="WalkMarker" type="MeshInstance3D" parent="Markers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 2)
+mesh = SubResource("MarkerMesh")
+surface_material_override/0 = SubResource("WalkMat")
+
+[node name="RunMarker1" type="MeshInstance3D" parent="Markers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.04, -3)
+mesh = SubResource("MarkerMesh")
+surface_material_override/0 = SubResource("RunMat")
+
+[node name="RunMarker2" type="MeshInstance3D" parent="Markers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.04, -13)
+mesh = SubResource("MarkerMesh")
+surface_material_override/0 = SubResource("RunMat")
+
+[node name="RunMarker3" type="MeshInstance3D" parent="Markers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.04, -13)
+mesh = SubResource("MarkerMesh")
+surface_material_override/0 = SubResource("RunMat")
+
+[node name="RunMarker4" type="MeshInstance3D" parent="Markers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.04, -3)
+mesh = SubResource("MarkerMesh")
+surface_material_override/0 = SubResource("RunMat")
+
+[node name="JumpMarker" type="MeshInstance3D" parent="Markers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, -22)
+mesh = SubResource("MarkerMesh")
+surface_material_override/0 = SubResource("JumpMat")
+
+[node name="PracticeBar" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62, -17)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PracticeBar"]
+shape = SubResource("RailShape")
+
+[node name="Rail" type="MeshInstance3D" parent="PracticeBar"]
+mesh = SubResource("RailMesh")
+surface_material_override/0 = SubResource("RailMat")
+
+[node name="LeftPost" type="MeshInstance3D" parent="PracticeBar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, -0.28, 0)
+mesh = SubResource("BeamMesh")
+surface_material_override/0 = SubResource("BoundaryMat")
+
+[node name="RightPost" type="MeshInstance3D" parent="PracticeBar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, -0.28, 0)
+mesh = SubResource("BeamMesh")
+surface_material_override/0 = SubResource("BoundaryMat")
+
+[node name="TrainingHUD" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="PanelContainer" parent="TrainingHUD"]
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 492.0
+offset_bottom = 164.0
+
+[node name="Margin" type="MarginContainer" parent="TrainingHUD/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 14
+
+[node name="Stack" type="VBoxContainer" parent="TrainingHUD/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Prompt" type="Label" parent="TrainingHUD/Panel/Margin/Stack"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Lesson"
+
+[node name="Detail" type="Label" parent="TrainingHUD/Panel/Margin/Stack"]
+layout_mode = 2
+text = "Move"
+autowrap_mode = 3
+
+[node name="Progress" type="Label" parent="TrainingHUD/Panel/Margin/Stack"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.74, 0.7, 1)
+text = "Progress"

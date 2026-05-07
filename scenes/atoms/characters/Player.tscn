@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cnvxyqg65mujd"]
+
+[ext_resource type="Script" uid="uid://d2r2d4nx2gldl" path="res://scripts/characters/player.gd" id="1_oeffh"]
+[ext_resource type="PackedScene" uid="uid://5pcde1fk4vec" path="res://assets/models/characters/benjamin/runtime/benjamin_male_animated.glb" id="2_mesh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+radius = 0.35
+height = 1.7
+
+[node name="Player" type="CharacterBody3D" unique_id=1338837078]
+script = ExtResource("1_oeffh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=997511550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("CapsuleShape3D_player")
+
+[node name="Mesh" parent="." unique_id=995495947 instance=ExtResource("2_mesh")]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1169429334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+spring_length = 4.0
+margin = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1459689675]
+transform = Transform3D(1, 0, 0, 0, 0.9847534, 0.17395642, 0, -0.17395642, 0.9847534, 0, 0, 1.1696138)
+current = true

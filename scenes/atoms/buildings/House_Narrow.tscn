@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://btguicy4l0nqm"]
+
+[ext_resource type="PackedScene" uid="uid://chc2wu6uqpxbp" path="res://assets/models/buildings/house_narrow/house_narrow.glb" id="1_q3ail"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q3ail"]
+size = Vector3(4, 15, 6)
+
+[node name="House_Narrow" type="StaticBody3D" unique_id=411234282]
+
+[node name="Mesh" type="Node3D" parent="." unique_id=1006972296 instance=ExtResource("1_q3ail")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1266531771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
+shape = SubResource("BoxShape3D_q3ail")

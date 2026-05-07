@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="StoryAct" format=3]
+
+[ext_resource type="Script" path="res://story/story_act.gd" id="1_act"]
+[ext_resource type="Script" path="res://story/story_beat.gd" id="2_beat"]
+
+[sub_resource type="Resource" id="beat_reach_wall"]
+script = ExtResource("2_beat")
+id = &"reach_the_wall"
+title = "The Wall"
+zone = "The Wall"
+description = "Benjamin reaches the end of town. A giant vertical plane. Uncircumventable. A door with a keyhole at its center."
+completed = false
+
+[sub_resource type="Resource" id="beat_find_key"]
+script = ExtResource("2_beat")
+id = &"find_the_key"
+title = "The Key"
+zone = "The Wall"
+description = "Finding the key becomes the center of Benjamin's universe."
+completed = false
+
+[resource]
+script = ExtResource("1_act")
+title = "VII — The Edge of Town"
+beats = [SubResource("beat_reach_wall"), SubResource("beat_find_key")]

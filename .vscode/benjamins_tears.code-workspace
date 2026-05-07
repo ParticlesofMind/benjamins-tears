@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Downloads/Meshy_AI_Full_body_character_i_biped"
+		}
+	],
+	"settings": {
+		"godotTools.editorPath.godot4": "/Applications/Godot.app/Contents/MacOS/Godot",
+		"godotTools.lsp.serverHost": "127.0.0.1",
+		"godotTools.lsp.serverPort": 6008,
+		"godotTools.lsp.autoReconnect.enabled": true,
+		"godotFormatterAndLinter.gdformatPath": ".venv/bin/gdformat",
+		"godotFormatterAndLinter.gdlintPath": ".venv/bin/gdlint",
+		"godotFormatterAndLinter.lineLength": 100,
+		"godotFormatterAndLinter.indentType": "Tabs",
+		"[gdscript]": {
+			"editor.defaultFormatter": "EddieDover.gdscript-formatter-linter",
+			"editor.formatOnSave": false,
+			"editor.insertSpaces": false,
+			"editor.tabSize": 4
+		},
+		"files.associations": {
+			"*.gd": "gdscript",
+			"*.tscn": "gdscene",
+			"*.tres": "gdresource",
+			"*.godot": "gdresource",
+			"*.gdshader": "gdshader",
+			"*.tldr": "tldraw"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"geequlim.godot-tools",
+			"alfish.godot-files",
+			"EddieDover.gdscript-formatter-linter",
+			"ms-python.python",
+			"tldraw-org.tldraw-vscode"
+		]
+	}
+}

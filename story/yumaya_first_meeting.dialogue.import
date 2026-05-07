@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ct542yyjnu5n4"
+path="res://.godot/imported/yumaya_first_meeting.dialogue-b0640282c6776fa6389a011760e85f2e.tres"
+
+[deps]
+
+source_file="res://story/yumaya_first_meeting.dialogue"
+dest_files=["res://.godot/imported/yumaya_first_meeting.dialogue-b0640282c6776fa6389a011760e85f2e.tres"]
+
+[params]
+
+defaults=true

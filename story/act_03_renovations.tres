@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="StoryAct" format=3 uid="uid://bjvnde63jfa1"]
+
+[ext_resource type="Script" uid="uid://3humhmorcc7" path="res://story/story_act.gd" id="1_act"]
+[ext_resource type="Script" uid="uid://cv5jliu5vfrav" path="res://story/story_beat.gd" id="2_beat"]
+
+[sub_resource type="Resource" id="beat_see_home"]
+script = ExtResource("2_beat")
+id = &"see_home_damage"
+title = "Survey the Damage"
+zone = "Town"
+description = "Benjamin returns home. The most recent Überfall has left it in a dire state."
+
+[sub_resource type="Resource" id="beat_repair"]
+script = ExtResource("2_beat")
+id = &"begin_repairs"
+title = "Begin Repairs"
+zone = "Town"
+description = "Benjamin starts fortifying. Equipment and preparations against the next Überfall."
+
+[resource]
+script = ExtResource("1_act")
+title = "III — Renovations"
+beats = Array[ExtResource("2_beat")]([SubResource("beat_see_home"), SubResource("beat_repair")])
